@@ -1,0 +1,67 @@
+export const dummySkills: SkillRecord[] = [
+	{
+		id: "1",
+		title: "Web Search",
+		slug: "web-search",
+		description:
+			"Searches the web and returns structured results for a given query.",
+		category: "Research",
+		tags: ["search", "web", "retrieval"],
+		installCommand: "claude install web-search",
+		createdAt: "2026-04-20T10:00:00Z",
+		authorClerkId: "user_abc123",
+		authorEmail: "alice@example.com",
+	},
+	{
+		id: "2",
+		title: "Code Review",
+		slug: "code-review",
+		description:
+			"Analyzes a pull request and provides actionable code review feedback.",
+		category: "Development",
+		tags: ["git", "review", "quality"],
+		installCommand: "claude install code-review",
+		createdAt: "2026-04-19T14:30:00Z",
+		authorClerkId: "user_def456",
+		authorEmail: "bob@example.com",
+	},
+	{
+		id: "3",
+		title: "Data Extractor",
+		slug: "data-extractor",
+		description:
+			"Extracts structured data from unstructured text, PDFs, or HTML pages.",
+		category: "Data",
+		tags: ["extraction", "parsing", "data"],
+		installCommand: "claude install data-extractor",
+		createdAt: "2026-04-18T09:15:00Z",
+		authorClerkId: "user_ghi789",
+		authorEmail: "carol@example.com",
+	},
+	{
+		id: "4",
+		title: "Slack Notifier",
+		slug: "slack-notifier",
+		description:
+			"Sends formatted messages to Slack channels from agent workflows.",
+		category: "Integrations",
+		tags: ["slack", "notifications", "messaging"],
+		installCommand: "claude install slack-notifier",
+		createdAt: "2026-04-17T16:45:00Z",
+		authorClerkId: "user_jkl012",
+		authorEmail: "dave@example.com",
+	},
+	{
+		id: "5",
+		title: "SQL Query Runner",
+		slug: "sql-query-runner",
+		description:
+			"Executes read-only SQL queries against a configured database and returns results.",
+		category: "Database",
+		tags: ["sql", "database", "query"],
+		installCommand: "claude install sql-query-runner",
+		createdAt: "2026-04-16T11:00:00Z",
+		authorClerkId: "user_mno345",
+		authorEmail: "eve@example.com",
+	},
+];
