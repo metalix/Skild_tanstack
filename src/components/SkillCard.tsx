@@ -8,18 +8,21 @@ import {
 	MessageSquare,
 } from "lucide-react";
 import { useState } from "react";
+import type { GetSklillsData } from "#/dataconnect-generated";
+
+type SkillCardProps = GetSklillsData["skills"];
 
 const SkillCard = ({
-	authorEmail,
-	category,
 	createdAt,
 	description,
-	id,
 	installCommand,
 	tags,
 	title,
-}: SkillRecord) => {
+	author,
+}: SkillCardProps) => {
 	const [copied, setCopied] = useState(false);
+
+	const category = tags.length > 0 ? tags[0] : "Uncategorized";
 
 	const handleCopy = () => {
 		navigator.clipboard.writeText(installCommand as string);
@@ -49,9 +52,13 @@ const SkillCard = ({
 			<div className="body">
 				<div className="meta">
 					<div className="author">
-						<img src="/logo512.png" alt="author avatar" className="avatar" />
+						<img
+							src={author.imageUrl}
+							alt={`${author.username}'s avatar`}
+							className="avatar"
+						/>
 						<div className="author-copy">
-							<p>Rafał</p>
+							<p>{author.username}</p>
 							<p>{new Date(createdAt as string).toLocaleDateString()}</p>
 						</div>
 					</div>
@@ -82,7 +89,7 @@ const SkillCard = ({
 
 						<div className="comments">
 							<MessageSquare size={14} />
-							<span>{authorEmail ? 1 : 0}</span>
+							<span>{author.email ? 1 : 0}</span>
 						</div>
 					</div>
 

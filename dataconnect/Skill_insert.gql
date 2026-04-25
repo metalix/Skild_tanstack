@@ -1,0 +1,7 @@
+# This is a file for you to write an un-named mutation. 
+# Only one un-named mutation is allowed per file.
+mutation {
+  skill_insert(
+    data: {id: "11111111222233334444555555555558", authorClerkId: "user_3ClmJWrHww7HOqfEaR6u7D8ZROs", createdAt: "2026-04-25T08:03:34.683Z", description: "Searches the web and returns structured results for a given query.", installCommand: "claude install web-search", promptConfig: "You are a helpful assistant.", tags: ["search", "web", "retrieval"], title: "Web Search", usageExample: "review the search results and summarize the key points."}
+  )
+}
